@@ -136,6 +136,8 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        ./scripts/feeds update helloworld
+        ./scripts/feeds install -a -f -p helloworld
         
     - name: 加载config & DIY_P2_SH
       run: |
